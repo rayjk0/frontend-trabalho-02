@@ -1,40 +1,37 @@
-.livro-card {
-  background-color: #f5f5ff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 50, 0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s;
+.livros {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    background: white;
 }
 
-.livro-card:hover {
-  transform: scale(1.02);
+.card {
+    background-color: var(--cor-destaque);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
 }
 
-.livro-imagem {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
+.card:hover {
+    transform: translateY(-10px);
 }
 
-.livro-detalhes {
-  padding: 15px;
-  color: #2c043b;
+.card img {
+    width: 100%;
+    height: 420px;
 }
 
-.livro-detalhes h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.1rem;
-  color: #2d2a87;
+.card h3 {
+    margin: 15px 0 5px;
+    color: rgb(124, 61, 124)
 }
 
-.livro-detalhes p {
-  margin: 4px 0;
-}
-
-.preco {
-  color: #053d07;
-  font-weight: 900;
-  margin-top: 8px;
+.card p {
+    margin-bottom: 15px;
+    color: rgb(70, 8, 70)
 }
