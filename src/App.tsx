@@ -1,5 +1,13 @@
+import { NavLink } from "react-router-dom";
+
+
 function App() {
-  return <h1>Olá, está funcionando!</h1>;
+    return (
+        <>
+            <NavLink to="/Componente" end>Cadastro</NavLink>
+            <h1>Tela principal</h1>
+        </>
+    )
 }
 
 export default App;
