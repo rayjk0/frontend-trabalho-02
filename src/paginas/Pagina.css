@@ -1,0 +1,49 @@
+.pagina-container {
+  padding: 40px 20px;
+  background: #05003a;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.livros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+input, button {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  margin: 4px;
+}
+
+.form-box {
+  background: #dcd0ff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+  width: 80%;
+  color: white;
+}
+
+th, td {
+  padding: 10px 16px;
+  border: 1px solid #9972ff;
+}
+
+th {
+  background-color: #9972ff;
+}

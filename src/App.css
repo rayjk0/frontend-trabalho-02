@@ -1,0 +1,16 @@
+.btn-trocar {
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #9c88ff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.btn-trocar:hover {
+  background-color: #7f6cf7;
+}
