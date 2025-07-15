@@ -1,9 +1,8 @@
-import './Pagina.css';
-
+import React from 'react';
 function PaginaCadastro() {
-  return (
+ return (
     <div className="pagina-container">
-      <h1>Livraria Online</h1>
+      <h1>Pagina Cadastro</h1>
 
       {/* Exemplo de campos (adicione seus inputs e tabela aqui) */}
       <input type="text" placeholder="Filtrar por título" />
@@ -23,7 +22,7 @@ function PaginaCadastro() {
           </tr>
         </thead>
         <tbody>
-          {/* Seus dados virão aqui */}
+         
         </tbody>
       </table>
     </div>

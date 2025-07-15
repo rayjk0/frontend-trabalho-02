@@ -1,8 +1,8 @@
 import React from 'react';
-function App() {
+function PaginaCatalogo() {
  return  (
     <div className="pagina-container">
-      <h1> Pagina App</h1>
+      <h1> Pagina Catalogo</h1>
 
       <ul className="livros-lista">
         <li>
@@ -33,4 +33,4 @@ function App() {
   );
 }
 
-export default App;
+export default PaginaCatalogo;

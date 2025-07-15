@@ -1,4 +1,5 @@
 import './LivrosCard.css';
+import './PaginaCatalogo';
 
 interface LivroProps {
   titulo: string;
