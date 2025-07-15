@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 function App() {
  return  (
@@ -31,6 +32,18 @@ function App() {
       </ul>
     </div>
   );
+=======
+import { NavLink } from "react-router-dom";
+
+
+function App() {
+    return (
+        <>
+            <NavLink to="/Componente" end>Cadastro</NavLink>
+            <h1>Tela principal</h1>
+        </>
+    )
+>>>>>>> 0ffbccdfc481566a061c340d007f1bb4178f4b74
 }
 
 export default App;
