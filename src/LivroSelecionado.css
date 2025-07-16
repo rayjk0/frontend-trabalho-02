@@ -1,0 +1,56 @@
+.livro-container {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.livro-container button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s;
+}
+
+.livro-container button:hover {
+  background-color: #0056b3;
+}
+
+.livro-container img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.livro-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.livro-container p {
+  margin: 0.4rem 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.livro-container a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.livro-container a:hover {
+  text-decoration: underline;
+}
