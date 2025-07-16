@@ -22,7 +22,12 @@ export default function PaginaCatalogo() {
   return (
     <div>
       <h1>LIVRARIA ONLINE</h1>
-      <h1> Catálogo de Livros</h1>
+      <h1>Catálogo de Livros</h1>
+
+      <Link to="/cadastro" style={{ display: 'inline-block', marginBottom: '1rem', padding: '0.5rem 1rem', backgroundColor: '#007BFF', color: '#fff', borderRadius: '4px', textDecoration: 'none' }}>
+        Cadastrar Novo Livro/Admin
+      </Link>
+
       <ul style={{ listStyle: 'none', display: 'flex', flexWrap: 'wrap', gap: '1rem', padding: 0 }}>
         {livros.map(livro => (
           <li key={livro.id} style={{ width: '200px', border: '1px solid #ccc', padding: '1rem', borderRadius: '8px' }}>
