@@ -1,36 +1,39 @@
-import React from 'react';
-function PaginaCatalogo() {
- return  (
-    <div className="pagina-container">
-      <h1> Pagina Catalogo</h1>
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './PaginaCatalogo.css';
 
-      <ul className="livros-lista">
-        <li>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Dom_Casmurro_-_1900_-_1%C2%AA_edicao.jpg"
-            alt="Capa do livro Dom Casmurro"
-          />
-          <p><strong>Título:</strong> Dom Casmurro</p>
-          <p><strong>Autor:</strong> Machado de Assis</p>
-          <p><strong>Ano:</strong> 1899</p>
-          <p><strong>Gênero:</strong> Romance</p>
-          <p><strong>Preço:</strong> R$ 29,90</p>
-        </li>
+interface Livro {
+  id: number;
+  titulo: string;
+  autor: string;
+  imagem: string;
+}
 
-        <li>
-          <img
-            src="https://m.media-amazon.com/images/I/61UwH9IN1JL.jpg"
-            alt="Capa do livro 1984"
-          />
-          <p><strong>Título:</strong> 1984</p>
-          <p><strong>Autor:</strong> George Orwell</p>
-          <p><strong>Ano:</strong> 1949</p>
-          <p><strong>Gênero:</strong> Ficção</p>
-          <p><strong>Preço:</strong> R$ 42,50</p>
-        </li>
+export default function PaginaCatalogo() {
+  const [livros, setLivros] = useState<Livro[]>([]);
+
+  useEffect(() => {
+    fetch('http://localhost:8000/livros')
+      .then(res => res.json())
+      .then(data => setLivros(data))
+      .catch(err => console.error('Erro ao buscar livros', err));
+  }, []);
+
+  return (
+    <div>
+      <h1>LIVRARIA ONLINE</h1>
+      <h1> Catálogo de Livros</h1>
+      <ul style={{ listStyle: 'none', display: 'flex', flexWrap: 'wrap', gap: '1rem', padding: 0 }}>
+        {livros.map(livro => (
+          <li key={livro.id} style={{ width: '200px', border: '1px solid #ccc', padding: '1rem', borderRadius: '8px' }}>
+            <Link to={`/livros/${livro.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <img src={livro.imagem} alt={livro.titulo} style={{ width: '100%', height: 'auto', borderRadius: '4px' }} />
+              <h3>{livro.titulo}</h3>
+              <p>{livro.autor}</p>
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
 }
-
-export default PaginaCatalogo;

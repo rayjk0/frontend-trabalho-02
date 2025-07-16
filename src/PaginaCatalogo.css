@@ -1,0 +1,69 @@
+/* PaginaCatalogo.module.css */
+.catalogContainer {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.catalogTitle {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.bookList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bookItem {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.bookItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bookLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.bookImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.bookDetails {
+  padding: 1rem;
+}
+
+.bookTitle {
+  margin: 0 0 0.5rem 0;
+  color: #0056b3;
+  font-size: 1.25rem;
+}
+
+.bookAuthor {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
