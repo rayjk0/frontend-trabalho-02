@@ -59,6 +59,8 @@ npm install
 
 ## Configuração do Banco de Dados
 
+<img width="563" height="292" alt="Captura de tela 2025-07-16 160019" src="https://github.com/user-attachments/assets/1ae9825a-a965-4bbe-81b0-13990599bd54" />
+
 ### 1. Criar o banco MySQL
 
 ```sql
