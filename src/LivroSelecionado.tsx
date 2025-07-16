@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
+import './LivroSelecionado.css';
 interface Livro {
   id: number;
   titulo: string;
@@ -29,20 +29,21 @@ function LivroSelecionado() {
   if (!livro) return <p>Carregando...</p>;
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <button onClick={() => navigate(-1)} style={{ marginBottom: '1rem' }}> Voltar</button>
+  <div className="livro-container">
+    <button onClick={() => navigate(-1)}>Voltar</button>
 
-      <h1>{livro.titulo}</h1>
-      <img src={livro.imagem} alt={livro.titulo} style={{ width: '200px', borderRadius: '8px' }} />
-      <p><strong>Autor:</strong> {livro.autor}</p>
-      <p><strong>Editora:</strong> {livro.editora}</p>
-      <p><strong>Ano de publicação:</strong> {livro.anoPublicacao}</p>
-      <p><strong>Páginas:</strong> {livro.paginas}</p>
-      <p><strong>Nota:</strong> {livro.nota}/10</p>
-      <p><strong>Gêneros:</strong> {livro.generos.map(g => g.nome).join(', ')}</p>
-      <a href={livro.ondeComprar} target="_blank" rel="noreferrer">Compre Aqui</a>
-    </div>
-  );
+    <h1>{livro.titulo}</h1>
+    <img src={livro.imagem} alt={livro.titulo} />
+    <p><strong>Autor:</strong> {livro.autor}</p>
+    <p><strong>Editora:</strong> {livro.editora}</p>
+    <p><strong>Ano de publicação:</strong> {livro.anoPublicacao}</p>
+    <p><strong>Páginas:</strong> {livro.paginas}</p>
+    <p><strong>Nota:</strong> {livro.nota}/10</p>
+    <p><strong>Gêneros:</strong> {livro.generos.map(g => g.nome).join(', ')}</p>
+    <a href={livro.ondeComprar} target="_blank" rel="noreferrer">Compre Aqui</a>
+  </div>
+);
+
 }
 
 export default LivroSelecionado;
